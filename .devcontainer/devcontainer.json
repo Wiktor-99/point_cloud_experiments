@@ -5,7 +5,7 @@
       "WORKSPACE": "${containerWorkspaceFolder}"
     }
   },
-  "remoteUser": "nvidia",
+  "remoteUser": "ubuntu",
   "runArgs": [
     "--network=host",
     "--cap-add=SYS_PTRACE",

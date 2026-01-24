@@ -26,6 +26,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libopenni-dev \
     libopenni2-dev \
     ccache \
+    libvtk9-dev \
+    libvtk9-qt-dev \
+    qtbase5-dev \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev \
+    freeglut3-dev \
+    libxmu-dev \
+    libxi-dev \
     && rm -rf /var/lib/apt/lists/*
 
 ENV CUDA_HOME=/usr/local/cuda-12.9
@@ -88,9 +96,9 @@ RUN cmake -G Ninja \
     -DBUILD_tools=ON \
     -DBUILD_examples=OFF \
     -DBUILD_global_tests=OFF \
-    -DWITH_VTK=OFF \
-    -DWITH_QT=OFF \
-    -DWITH_OPENGL=OFF \
+    -DWITH_VTK=ON \
+    -DWITH_QT=ON \
+    -DWITH_OPENGL=ON \
     -DPCL_ENABLE_SSE=ON \
     -DCMAKE_CXX_FLAGS="-O3 -march=native -DNDEBUG -fPIC" \
     -DCMAKE_CUDA_FLAGS="-O3 --use_fast_math -Xcompiler -fPIC --expt-relaxed-constexpr" \

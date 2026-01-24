@@ -66,7 +66,7 @@ RUN cmake -G Ninja \
     -DBUILD_gpu_kinfu=OFF \
     -DBUILD_gpu_kinfu_large_scale=OFF \
     -DBUILD_gpu_octree=ON \
-    -DBUILD_gpu_people=ON \
+    -DBUILD_gpu_people=OFF \
     -DBUILD_gpu_sample_consensus=ON \
     -DBUILD_gpu_segmentation=ON \
     -DBUILD_gpu_surface=ON \
